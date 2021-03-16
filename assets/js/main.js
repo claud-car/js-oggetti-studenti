@@ -1,7 +1,3 @@
-//Dare la possibilità all’utente,
-//attraverso 3 prompt(), di aggiungere un nuovo
-//oggetto studente inserendo nell’ordine: nome, cognome e età.
-
 //ESERCIZIO 1
 //Creare un oggetto che descriva uno studente,
 //con le seguenti proprietà: nome, cognome e età.
@@ -58,26 +54,53 @@ var studenti = [
   {
     nome: 'Claudio',
     cognome: 'Carchietti',
+    eta: 26,
   },
   {
     nome: 'Alessandro',
     cognome: 'Benigni',
+    eta: 40,
   },
   {
     nome: 'Frodo',
     cognome: 'Baggins',
+    eta: 89,
   },
   {
     nome: 'Bilbo',
     cognome: 'Baggins',
+    eta: 111,
   },
   {
     nome: 'Dario',
     cognome: 'Lampa',
+    eta: 4,
   }
 ];;
 
+var prova = [];
+
 for (var i = 0; i < studenti.length; i++) {
-  document.getElementById('esercizio2').innerHTML = 'Nome : ' + studenti[i].nome + ' , ' + 'Cognome : ' + studenti[i].cognome
-  console.log('Nome : ' + studenti[i].nome + ' , ' + 'Cognome : ' + studenti[i].cognome);
+  prova += 'Nome : ' + studenti[i].nome + ' , ' + 'Cognome : ' + studenti[i].cognome +  ' , ' + 'Età : ' + studenti[i].eta + '<br>' + '<br>';
 }
+
+document.getElementById('esercizio2').innerHTML = prova;
+
+console.log('INIZIO ESERCIZIO 3');
+
+//ESERCIZIO 3
+
+//Dare la possibilità all’utente,
+//attraverso 3 prompt(), di aggiungere un nuovo
+//oggetto studente inserendo nell’ordine: nome, cognome e età.
+
+
+$('#send').click(function () {
+  var nome = $('#nome').val();
+  var cognome = $('#cognome').val();
+  var eta = $('#età').val();
+  var studente = [nome,cognome,eta];
+
+  studenti.push(studente);
+  console.log(studenti);
+})
