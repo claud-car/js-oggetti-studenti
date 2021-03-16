@@ -101,6 +101,14 @@ $('#send').click(function () {
   var eta = $('#età').val();
   var studente = [nome,cognome,eta];
 
+  if (studente){
+    var studente ={
+      nome:nome,
+      cognome:cognome,
+      eta:eta,
+    }
+  }
+
   studenti.push(studente);
-  console.log(studenti[i]);
+  console.log(studenti);
 })
