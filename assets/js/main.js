@@ -102,5 +102,5 @@ $('#send').click(function () {
   var studente = [nome,cognome,eta];
 
   studenti.push(studente);
-  console.log(studenti);
+  console.log(studenti[i]);
 })
